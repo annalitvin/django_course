@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher</title>
+</head>
+<body>
+{% if teacher_list %}
+    {% for teacher in teacher_list %}
+        <img src="{{ teacher.photo }}" />
+        <p>{{ teacher.photo }}</p>
+        <p>{{ teacher.date_of_birth }}</p>
+        <p>{{ teacher.employment }}</p>
+        <p>{{ teacher.salary }} </p>
+        <hr>
+    {% endfor %}
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+</body>
+</html>
